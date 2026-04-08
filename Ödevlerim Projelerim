@@ -1,0 +1,295 @@
+1.KULLANICIDAN BİR YIL ALARAK BU YILIN ARTIK YIL OLUP OLMADIGINI BULAN KOD C DİLİNDE 
+
+#include <stdio.h>
+
+int main()
+{
+    int yil;
+
+    printf("Bir yil gir: ");
+    scanf("%d", &yil);
+
+    if ((yil % 4 == 0 && yil % 100 != 0) || (yil % 400 == 0))
+    {
+        printf("%d artik yildir.\n", yil);
+    }
+    else
+    {
+        printf("%d artik yil degildir.\n", yil);
+    }
+
+    return 0;
+}
+
+
+
+SORU 2.POZİTİF TAM SAYİYİ OKUYARAK BU SAYININ KAÇ KAÇ HANELİ OLDUGUNU BULAN BİR 
+#include <stdio.h>
+
+int main()
+{
+    int sayi, basamak = 0;
+
+    printf("Pozitif bir sayi gir: ");
+    scanf("%d", &sayi);
+
+    if (sayi == 0)
+    {
+        basamak = 1;
+    }
+    else
+    {
+        while (sayi > 0)
+        {
+            sayi = sayi / 10;
+            basamak++;
+        }
+    }
+
+    printf("Sayi %d hanelidir.\n", basamak);
+
+    return 0;
+}
+
+3.ÜÇ SAYİ OKUYARAK BU SAYILAR EŞİT İSE TÜM SATILAR EŞİT YAZAN EGER ÜÇ
+ SAYI FARKLISA TÜM SAYILAR FARKLIDIR ŞEKLİNDE YAZAN
+
+#include <stdio.h>
+
+int main()
+{
+    int s1,s2,s3;
+    printf("sayi giriniz:>");
+    scanf("%d %d %d ", &s1,&s2,&s3);
+    if(s1==s2 && s2==s3){
+        printf("tum sayilar eshitir ");
+
+    }else if( s1!=s2 && s1!=s3 && s2!=s3 ){
+        printf("eshit degildir tumu \n!");
+    }
+    return 0;
+
+}
+
+4.Kullanıcıdan üç sayı kabul eden ve sayılar artan sıradaysa "artıyor",
+ azalan sıradaysa "azalan" ve aksi takdirde "ne artıyor ne de azalan sıra" 
+
+#include <stdio.h>
+
+int main() {
+    int s1, s2, s3;
+
+   
+    printf("Uc sayi giriniz: ");
+    scanf("%d %d %d", &s1, &s2, &s3);
+
+    
+    if (s1 < s2 && s2 < s3) {
+        printf("artiyor\n");
+    } 
+    
+    else if (s1 > s2 && s2 > s3) {
+        printf("azalan\n");
+    } 
+   
+    else {
+        printf("ne artiyor ne de azalan sira\n");
+    }
+
+    return 0;
+}
+
+5.Verilen bir toplam dakika değerini yıllara ve günlere dönüştürmek için bir C programı yazınız
+
+#include <stdio.h>
+
+int main()
+{
+    long dakika;
+    int yil, gun, kalan_dakika;
+
+    printf("Dakika degerini giriniz: ");
+    scanf("%ld", &dakika);
+
+    
+    yil = dakika / 525600;
+
+  
+    kalan_dakika = dakika % 525600;
+
+   
+    gun = kalan_dakika / 1440;
+
+    printf("%ld dakika yaklasik %d yil ve %d gundur.\n", dakika, yil, gun);
+
+    return 0;
+}
+
+
+6.Verilen iki tam sayıyı çıkarma operatörü kullanarak bölen bir C programı yazınız.
+
+#include <stdio.h>
+
+int main()
+{
+    int bolunen, bolen;
+    int bolum = 0;
+    int kalan;
+
+    printf("Bolunecek sayiyi girin: ");
+    scanf("%d", &bolunen);
+    printf("Bolen sayiyi girin: ");
+    scanf("%d", &bolen);
+
+    
+    if (bolen == 0)
+    {
+        printf("Hata: Bir sayi 0'a bolunemez!\n");
+    }
+    else
+    {
+        kalan = bolunen;
+
+        while (kalan >= bolen)
+        {
+            kalan = kalan - bolen; 
+            bolum++;              
+        }
+
+        printf("Sonuc: %d / %d\n", bolunen, bolen);
+        printf("Bolum: %d\n", bolum);
+        printf("Kalan: %d\n", kalan);
+    }
+
+    return 0;
+}
+
+
+7. Çarpma operatörü (*) kullanmadan verilen iki tam sayıyı çarpmak için bir C programı yazınız.
+
+#include <stdio.h>
+
+int main()
+{
+    int a, b,carpma=0;
+    printf("charpylacak sayiyi giriniz:>");
+    scanf("%d", &a);
+    printf("kaca carpmamy istiyorsunuz:>");
+    scanf("%d",&b);
+    for (int i = 0; i <b;i++){
+       carpma= carpma + a;
+    }
+    printf("%d\n carpym kulanmadan carpylan sayinin sonucu ",carpma);
+    return 0;
+}
+
+8.. 1 ile 100 arasında olan ve 3, 5 ve her ikisine bölünebilen sayıları basmak için bir C programı yazınız
+#include <stdio.h>
+
+int main()
+{
+    printf("1-100 arasindaki uygun sayilar:\n");
+
+    for (int i = 1; i <= 100; i++)
+    {
+        
+        if (i % 3 == 0 && i % 5 == 0)
+        {
+            printf("%d : Hem 3'e hem 5'e bolunur\n", i);
+        }
+        else if (i % 3 == 0)
+        {
+            printf("%d : 3'e bolunur\n", i);
+        }
+        else if (i % 5 == 0)
+        {
+            printf("%d : 5'e bolunur\n", i);
+        }
+    }
+
+    return 0;
+}
+
+9. İlk 100 asal sayının toplamını hesaplamak için bir C programı yazınız.
+
+#include <stdio.h>
+
+int main() {
+    int sayi = 2;     
+    int bulunan = 0;   
+    long toplam = 0;   
+    while (bulunan < 100) {
+        int asalMi = 1; // Başlangıçta asal kabul ediyoruz
+
+       
+        for (int i = 2; i * i <= sayi; i++) {
+            if (sayi % i == 0) {
+                asalMi = 0; // Bir sayıya tam bölünürse asal değildir
+                break;
+            }
+        }
+
+       
+        if (asalMi == 1) {
+            toplam += sayi;
+            bulunan++;
+        }
+
+        sayi++;     }
+
+    printf("İlk 100 asal sayının toplamı: %ld\n", toplam);
+
+    return 0;
+}
+
+10. Tam sayı bir numarayı tersine çevirmek için bir C programı yazınız. 
+
+#include <stdio.h>
+
+int main()
+{
+    int sayi, tersi = 0, kalan;
+
+    printf("Bir sayi giriniz: ");
+    scanf("%d", &sayi);
+
+    while (sayi != 0)
+    {
+        kalan = sayi % 10;          
+        tersi = tersi * 10 + kalan; 
+        sayi = sayi / 10;           
+    }
+
+    printf("Sayinin tersi: %d\n", tersi);
+
+    return 0;
+}
+
+11. Verilen pozitif sayıdan küçük olan asal sayıların adedini saymak için bir C programı yazın.
+
+#include <stdio.h>
+int main()
+{
+    int limit, adet = 0;
+    printf("Bir sayi giriniz: ");
+    scanf("%d", &limit);
+    for (int i = 2; i < limit; i++)
+    {
+        int asalMi = 1; 
+        for (int j = 2; j * j <= i; j++)
+        {
+            if (i % j == 0)
+            {
+                asalMi = 0;
+                break;
+            }
+        }
+        if (asalMi == 1)
+        {
+            adet++;
+        }
+    }
+    printf("%d sayisindan kucuk olan toplam asal sayi adedi: %d\n", limit, adet);
+    return 0;
+}
+
