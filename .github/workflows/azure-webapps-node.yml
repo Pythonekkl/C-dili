@@ -1,0 +1,92 @@
+#define            → değişken / sabit tanımlar
+#error             → hata mesajı gösterir
+#include           → başka bir dosyanın içeriğini ekler
+#undef             → tanımlı bir değişkeni kaldırır
+
+abort              → programı aniden durdurur
+abs                → mutlak değer alır
+acos               → arkkosinüs hesaplar
+asctime            → zamanı metne çevirir
+asin               → arksinüs hesaplar
+assert             → ifade yanlışsa programı durdurur
+atan               → arktanjant hesaplar
+atan2              → açı hesaplar (bölgeye göre)
+atexit             → program bitince çalışacak fonksiyon tanımlar
+
+atof               → string → ondalıklı sayı çevirir
+atoi               → string → tam sayı çevirir
+atol               → string → long çevirir
+
+bsearch            → ikili arama yapar
+calloc             → bellek ayırır ve sıfırlar
+ceil               → yukarı yuvarlar
+clearerr           → dosya hatalarını temizler
+clock              → geçen süreyi verir
+cos                → kosinüs hesaplar
+cosh               → hiperbolik kosinüs
+ctime              → zamanı formatlı döndürür
+difftime           → iki zaman farkını verir
+div                → bölüm ve kalanı verir
+exit               → programı sonlandırır
+exp                → e üzeri x hesaplar
+fabs               → ondalıklı mutlak değer
+
+fclose             → dosyayı kapatır
+feof               → dosya sonuna gelindi mi kontrol eder
+ferror             → dosya hatası var mı kontrol eder
+fflush             → tamponu boşaltır
+fgetc              → dosyadan karakter okur
+fgets              → dosyadan string okur
+fopen              → dosya açar
+fprintf            → dosyaya yazdırır
+fputc              → dosyaya karakter yazar
+fputs              → dosyaya string yazar
+fread              → dosyadan veri okur
+free               → belleği serbest bırakır
+freopen            → dosyayı yeniden açar
+fscanf             → dosyadan formatlı okur
+fseek              → dosyada konum değiştirir
+ftell              → dosya konumunu verir
+fwrite             → dosyaya veri yazar
+
+getchar            → klavyeden karakter alır
+getenv             → ortam değişkeni alır
+
+isalnum            → harf veya sayı mı kontrol eder
+isalpha            → harf mi kontrol eder
+isdigit            → sayı mı kontrol eder
+islower            → küçük harf mi kontrol eder
+isupper            → büyük harf mi kontrol eder
+isspace            → boşluk mu kontrol eder
+
+malloc             → bellek ayırır
+memcmp             → bellek karşılaştırır
+memcpy             → bellek kopyalar
+memset             → belleği doldurur
+
+pow                → üs alır
+printf             → ekrana yazdırır
+putchar            → karakter yazdırır
+puts               → string yazdırır
+
+rand               → rastgele sayı üretir
+realloc            → belleği yeniden boyutlandırır
+remove             → dosya siler
+rename             → dosya adını değiştirir
+
+scanf              → kullanıcıdan veri alır
+sqrt               → karekök alır
+srand              → rastgele sayı başlatır
+
+strcat             → string birleştirir
+strcmp             → string karşılaştırır
+strcpy             → string kopyalar
+strlen             → string uzunluğu verir
+strstr             → alt string arar
+
+system             → sistem komutu çalıştırır
+
+time               → mevcut zamanı verir
+
+tolower            → küçük harfe çevirir
+toupper            → büyük harfe çevirir
